@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	padding: 30px;
+}
+
+a {
+	color: #6CF;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header, section {
+	width: 100%;
+	margin: 30px auto;
+	max-width: 400px;
+}
+
+.results {
+	display: none;
+}
+
+.result {
+	list-style-type: none;
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	border: 1px solid #CCC;
+	border-radius: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.result img {
+	width: 100%;
+}

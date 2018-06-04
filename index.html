@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 	<title>Alyse's YouTube Search</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="A pretty useless YouTube search">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 </head>
 <body>
 	<header role="header">
@@ -11,30 +15,21 @@
 	</header>
 
 	<section class="search-box js-search-box" role="">
-		<form name="search">
+		<form class="js-search-form" name="search">
 			<label for="searchTerm">Search:</label>
 			<input class="js-search-box" type="text" name="searchTerm" id="searchTerm" placeholder="puppies and kittens" required>
-			<button class="js-search-button" type="submit"><i class="fa fa-search"></i></button>
+			<button type="submit"><i class="fa fa-search"></i></button>
 		</form>
 	</section>
 
 	<section class="results js-results" role="">
 		<h2>Results:</h2>
-		<ul>
-			<li class="result js-result">
-				<a href="video url">
-					<img class="thumbnail js-thumbnail" src="thumbnail URL" alt="video Title">
-				</a>
-				<p><a href="channel url">More from channel name</a></p>
-			</li>
+		<ul class="js-results-list">
+
 		</ul>
 	</section>
 
-	<footer class="page-nav js-page-nav">
-		<ul>
-			<li class="prev-page js-prev-page"><a href="prev page url"><i class="fa fa-arrow-left"></i> Previous Page</a></li>
-			<li class="next-page js-next-page"><a href="next page url">Next Page <i class="fa fa-arrow-right"></i></a></li>
-		</ul>
-	</footer>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
