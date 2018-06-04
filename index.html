@@ -6,12 +6,35 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<h1>Alyse's YouTube Search</h1>
-	<form name="search">
-		<label for="searchTerm">Search:</label>
-		<input class="js-search-box" type="text" name="searchTerm" id="searchTerm" placeholder="puppies and kittens" required>
-		<button class="js-search-button" type="submit"><i class="fa fa-search"></i></button>
-	</form>
-	
+	<header role="header">
+		<h1>Alyse's YouTube Search</h1>
+	</header>
+
+	<section class="search-box js-search-box" role="">
+		<form name="search">
+			<label for="searchTerm">Search:</label>
+			<input class="js-search-box" type="text" name="searchTerm" id="searchTerm" placeholder="puppies and kittens" required>
+			<button class="js-search-button" type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</section>
+
+	<section class="results js-results" role="">
+		<h2>Results:</h2>
+		<ul>
+			<li class="result js-result">
+				<a href="video url">
+					<img class="thumbnail js-thumbnail" src="thumbnail URL" alt="video Title">
+				</a>
+				<p><a href="channel url">More from channel name</a></p>
+			</li>
+		</ul>
+	</section>
+
+	<footer class="page-nav js-page-nav">
+		<ul>
+			<li class="prev-page js-prev-page"><a href="prev page url"><i class="fa fa-arrow-left"></i> Previous Page</a></li>
+			<li class="next-page js-next-page"><a href="next page url">Next Page <i class="fa fa-arrow-right"></i></a></li>
+		</ul>
+	</footer>
 </body>
 </html>
