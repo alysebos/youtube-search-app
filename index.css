@@ -27,10 +27,6 @@ header, section {
 	max-width: 400px;
 }
 
-.results {
-	display: none;
-}
-
 .result {
 	list-style-type: none;
 	display: block;

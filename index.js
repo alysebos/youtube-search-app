@@ -62,8 +62,8 @@ function watchSubmit() {
 		// Run the get data functin using the query and the callback to display it
 		getDataFromAPI(query, displaySearchData);
 		// Show the results section
-		$('.js-search-text').show();
-		$('.js-results').show();
+		$('.js-search-text').prop('hidden', false);
+		$('.js-results').prop('hidden', false);
 	});
 }
 
