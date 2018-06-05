@@ -17,7 +17,7 @@ function renderResult(result) {
 		return `
 			<li class="result">
 				<a href="https://www.youtube.com/channel/${result.id.channelId}">
-				<img class="thumbnail" src="${result.snippet.thumbnails.high.url}" alt="${result.snippet.title}">
+				<img class="thumbnail" src="${result.snippet.thumbnails.high.url}" alt="Visit the channel: ${result.snippet.title} on YouTube">
 				</a>
 				<p><a href="https://www.youtube.com/channel/${result.snippet.channelId}">Visit the channel: ${result.snippet.channelTitle}</a></p>
 			</li>
@@ -27,7 +27,7 @@ function renderResult(result) {
 		return `
 			<li class="result">
 				<a href="https://www.youtube.com/watch?v=${result.id.videoId}">
-				<img class="thumbnail" src="${result.snippet.thumbnails.medium.url}" alt="${result.snippet.title}">
+				<img class="thumbnail" src="${result.snippet.thumbnails.medium.url}" alt="Watch the video: ${result.snippet.title} on YouTube">
 				</a>
 				<p><a href="https://www.youtube.com/channel/${result.snippet.channelId}">More from ${result.snippet.channelTitle}</a></p>
 			</li>
@@ -37,6 +37,11 @@ function renderResult(result) {
 }
 
 function displaySearchData(data) {
+	// gather total results and results on the page
+	const totalResults = data.pageInfo.totalResults;
+	const resultsOnPage = data.items.length;
+	// insert this data into the appropriate section
+	$('.js-search-text').html(`<p>Displaying the first ${resultsOnPage} of ${totalResults} total search results.</p>`);
 	// set the results to each item and render them using the above function
 	const results = data.items.map((item) => renderResult(item));
 	// insert the results into the results list
@@ -57,6 +62,7 @@ function watchSubmit() {
 		// Run the get data functin using the query and the callback to display it
 		getDataFromAPI(query, displaySearchData);
 		// Show the results section
+		$('.js-search-text').show();
 		$('.js-results').show();
 	});
 }
