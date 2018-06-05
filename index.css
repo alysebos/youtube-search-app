@@ -18,6 +18,9 @@ a:hover {
 	text-decoration: underline;
 }
 
+*:focus {
+}
+
 header, section {
 	width: 100%;
 	margin: 30px auto;
@@ -41,4 +44,5 @@ header, section {
 
 .result img {
 	width: 100%;
+	border: 3px solid rgba(255,255,255,0);
 }
